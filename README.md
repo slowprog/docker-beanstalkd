@@ -2,18 +2,16 @@
 
 A Docker container for beanstalkd, a simple and fast general purpose work queue.
 
-[![Build Status](https://travis-ci.com/maateen/docker-beanstalkd.svg?branch=master)](https://travis-ci.com/maateen/docker-beanstalkd)
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/maateen/docker-beanstalkd)](https://hub.docker.com/r/maateen/docker-beanstalkd/builds)
-[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/maateen/docker-beanstalkd)](https://hub.docker.com/r/maateen/docker-beanstalkd/builds)
-[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/maateen/docker-beanstalkd/latest)](https://hub.docker.com/repository/docker/maateen/docker-beanstalkd/tags)
-[![MicroBadger Layers](https://img.shields.io/microbadger/layers/maateen/docker-beanstalkd)](https://microbadger.com/images/maateen/docker-beanstalkd "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/license/maateen/docker-beanstalkd.svg)](https://microbadger.com/images/maateen/docker-beanstalkd "Get your own license badge on microbadger.com")
+[![Build Status](https://travis-ci.com/slowprog/docker-beanstalkd.svg?branch=master)](https://travis-ci.com/slowprog/docker-beanstalkd)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/slowprog/docker-beanstalkd)](https://hub.docker.com/r/slowprog/docker-beanstalkd/builds)
+[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/slowprog/docker-beanstalkd)](https://hub.docker.com/r/slowprog/docker-beanstalkd/builds)
+[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/slowprog/docker-beanstalkd/latest)](https://hub.docker.com/repository/docker/slowprog/docker-beanstalkd/tags)
 
 ## Quick reference
 
-- **Where to file issues**: https://github.com/maateen/docker-beanstalkd/issues
-- **Where to get help**: https://github.com/maateen/docker-beanstalkd/issues
-- **Image updates**: https://github.com/maateen/docker-beanstalkd/pulls
+- **Where to file issues**: https://github.com/slowprog/docker-beanstalkd/issues
+- **Where to get help**: https://github.com/slowprog/docker-beanstalkd/issues
+- **Image updates**: https://github.com/slowprog/docker-beanstalkd/pulls
 
 ## Supported tags
 
@@ -36,19 +34,19 @@ For more information and related downloads for beanstalkd, please visit  [beanst
 ### start a beanstalkd instance
 
 ```
-$ docker run --name some-beanstalkd -d maateen/docker-beanstalkd
+$ docker run --name some-beanstalkd -d slowprog/docker-beanstalkd
 ```
 
 ### start with persistent storage
 
 ```
-$ docker run --name some-beanstalkd -v $(pwd):/var/cache/beanstalkd -d maateen/docker-beanstalkd
+$ docker run --name some-beanstalkd -v $(pwd):/var/cache/beanstalkd -d slowprog/docker-beanstalkd
 ```
 
 ### exposing external port
 
 ```
-$ docker run --name some-beanstalkd -d -p 11300:11300 maateen/docker-beanstalkd
+$ docker run --name some-beanstalkd -d -p 11300:11300 slowprog/docker-beanstalkd
 ```
 
 ## Environment Variables
@@ -67,7 +65,7 @@ A  `FSYNC_INTERVAL`  value of 0 will cause  **beanstalkd**  to call fsync every 
 
 The `beanstalkd` images come in many flavors, each designed for a specific use case.
 
-###  `maateen/docker-beanstalkd:<beanstalkd_version>-alpine-<alpine_version>`
+###  `slowprog/docker-beanstalkd:<beanstalkd_version>-alpine-<alpine_version>`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org/), available in [the  `alpine`  official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

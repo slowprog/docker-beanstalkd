@@ -32,6 +32,3 @@ else
         done
     done
 fi
-
-# microbadger webhook
-curl -sL -X POST https://hooks.microbadger.com/images/maateen/docker-beanstalkd/cJ6YwSmK3M8-7iGdWYPYQoST-iY\=

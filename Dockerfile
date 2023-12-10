@@ -47,8 +47,9 @@ LABEL version=$BEANSTALKD_VERSION \
     com.microscaling.docker.dockerfile="/Dockerfile" \
     com.microscaling.license="GPL-3.0"
 
-ENV PV_DIR /var/cache/beanstalkd
+ENV PV_DIR /data
 ENV FSYNC_INTERVAL 1000
+ENV JOB_SIZE 65535
 
 COPY --from=builder /build/beanstalkd /usr/bin/
 
@@ -59,4 +60,4 @@ EXPOSE 11300
 
 HEALTHCHECK --interval=5s --timeout=2s --retries=3 CMD pgrep beanstalkd || exit 1
 
-CMD /usr/bin/beanstalkd -b ${PV_DIR} -f ${FSYNC_INTERVAL}
+CMD /usr/bin/beanstalkd -b ${PV_DIR} -f ${FSYNC_INTERVAL} -z ${JOB_SIZE}
